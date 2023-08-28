@@ -789,7 +789,7 @@ Serializations Block::getSerializations() const
     res.reserve(data.size());
 
     for (const auto & column : data)
-        res.push_back(std::move(column.type->getDefaultSerialization()));
+        res.push_back(column.type->getDefaultSerialization());
 
     return res;
 }
